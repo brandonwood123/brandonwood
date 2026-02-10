@@ -1,0 +1,157 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sticky footer layout */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header with full background image on all pages */
+header {
+    background: 
+        linear-gradient(rgba(10,37,64,0.7), rgba(10,37,64,0.7)), /* dark overlay */
+        url("images/header.jpeg") center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px; /* tall header */
+}
+
+header h1,
+header p {
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* Navigation */
+nav {
+    background: #111;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    display: block;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #0a2540;
+}
+
+nav a.active {
+    background: #0a3a66;
+    border-radius: 5px;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.about-section img {
+    width: 220px;
+    border-radius: 12px;
+}
+
+.about-text h2 {
+    margin-bottom: 10px;
+    color: #0a2540;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.8;
+}
+
+/* Word-style justified text for Experience & Projects */
+.experience-list p,
+.project-list li {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Consistent link styling */
+main a {
+    color: #0a3a66;
+    text-decoration: underline;
+}
+
+main a:hover {
+    color: #0a2540;
+}
+
+/* Contact page spacing & alignment */
+.contact-item {
+    margin: 20px 0;          /* more vertical space */
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;               /* space between icon & text */
+}
+
+.contact-item .icon {
+    font-size: 1.4rem;
+    min-width: 30px;         /* keeps icons aligned */
+}
+
+/* Footer */
+footer {
+    background: #0a2540;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .experience-list p,
+    .project-list li,
+    .about-text p {
+        text-align: left;
+    }
+}
